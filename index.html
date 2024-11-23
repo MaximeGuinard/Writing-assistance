@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rédaction SEO Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="meta-section">
+            <input type="text" id="page-title" placeholder="Titre de la page">
+            <textarea id="page-description" placeholder="Description de la page"></textarea>
+            <div class="keyword-section">
+                <h3>Mots-clés SEO</h3>
+                <div class="keyword-input-container">
+                    <input type="text" id="keyword-input" placeholder="Ajouter des mots-clés (séparés par des virgules)">
+                    <button id="add-keyword">Ajouter</button>
+                </div>
+                <div id="keywords-list" class="keywords-list"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="editor-section">
+                <div class="editor-container">
+                    <div class="editor-toolbar">
+                        <button onclick="formatText('bold')"><b>G</b></button>
+                        <button onclick="formatText('italic')"><i>I</i></button>
+                        <button onclick="formatText('h2')">H2</button>
+                        <button onclick="formatText('h3')">H3</button>
+                        <button onclick="formatText('link')">Lien</button>
+                    </div>
+                    <div id="content-editor" contenteditable="true" class="content-editor"></div>
+                </div>
+            </div>
+
+            <div class="metrics-panel">
+                <div class="metric-card">
+                    <div class="scores-container">
+                        <div class="score-item">
+                            <div class="score-circle" id="seo-score">0</div>
+                            <span>Score SEO</span>
+                        </div>
+                        <div class="score-item">
+                            <div class="danger-circle" id="danger-circle">0</div>
+                            <span>Danger SEO</span>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span>Mots:</span>
+                            <span id="word-count">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Temps de lecture:</span>
+                            <span id="reading-time">0 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
